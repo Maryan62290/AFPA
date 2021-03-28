@@ -2,7 +2,6 @@
 
 // ex pour ce soir, il faut ajouter des champs photos dans le tab
 //  faire un affichage responsive (pc, tablette, mobile) en utilisant le composant card
-$card = "car col" ; 
 
 ?>
 <!doctype html>
@@ -16,16 +15,7 @@ $card = "car col" ;
   </head>
   <body>
     <h1 class="h1 text-center">Produits</h1>
-<!-- Large groupe de bouton -->
-<div class="btn-group">
-<button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-Bouton large <span class="caret"></span>
-</button>
-<ul class="dropdown-menu">
-<li><a href="#" title="Lien 1">Lien 1>/a></li>
-<li><a href="#" title="Lien 2">Lien 2>/a></li>
-</ul>
-</div>
+
 <div class="container">
   <div class="row">
  
