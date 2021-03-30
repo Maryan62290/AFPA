@@ -1,5 +1,7 @@
 <?php 
 
+
+
 class Voiture{
 
     public $marque;
@@ -7,25 +9,32 @@ class Voiture{
     public $couleur;
     public $nbrRoue;
 
-
+    function __construct() {
+        
+      }
+     
     function set_marque($marque){
         $this->marque = $marque;
+        return $this;
     }
     function set_modele($modele){
-        $this->modéle = $modele;
+        $this->modele = $modele;
+        return $this;
     }
     function set_couleur($couleur){
         $this->couleur = $couleur;
+        return $this;
     }
     function set_nbrRoue($nbrRoue){
         $this->nbrRoue = $nbrRoue;
+        return $this;
     }
 
     function get_marque(){
         return $this->marque ;
     }
     function get_modele(){
-        return $this->modéle;
+        return $this->modele;
     }
     function get_couleur(){
         return $this->couleur;
@@ -35,24 +44,20 @@ class Voiture{
     }
 }
 
-$toyota = new Voiture();
-$yaris = new Voiture();
-$rouge = new Voiture();
-$quatre = new Voiture();
 
-$toyota->set_marque('toyota');
-$yaris->set_modele('yaris');
-$rouge->set_couleur('rouge');
-$quatre->set_nbrRoue(4);
+
+$toyota = new Voiture();
+
+
+$toyota->set_marque('toyota')->set_modele('yaris')->set_couleur('rouge')->set_nbrRoue(4);
 
 echo $toyota->get_marque();
 echo '<br/>';
-echo $yaris->get_modele();
+echo $toyota->get_modele();
 echo '<br/>';
-echo $rouge->get_couleur();
+echo $toyota->get_couleur();
 echo '<br/>';
-echo $quatre->get_nbrRoue();
-
+echo $toyota->get_nbrRoue();
 
 
 
