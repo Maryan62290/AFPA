@@ -1,0 +1,9 @@
+header{
+  background-color: #542542;
+  height:150px;
+}
+body{
+  color:#fff;
+    background-image:url("../img/fond.png");
+    background-repeat: repeat;
+}

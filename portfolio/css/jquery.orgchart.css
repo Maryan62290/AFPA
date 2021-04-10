@@ -1,0 +1,234 @@
+.orgchart {
+  affichage: bloc en ligne;
+  position: relative;
+  haut: 30px;
+  hauteur min: 202px;
+  largeur min: 202px;
+  -webkit-touch-callout: aucun;
+  -webkit-user-select: aucun;
+  -khtml-user-select: aucun;
+  -moz-user-select: aucun;
+  -ms-user-select: aucun;
+  sélection par l'utilisateur: aucun;
+  background-image: gradient linéaire (90deg, rgba (200, 0, 0, 0.15) 10%, rgba (0, 0, 0, 0) 10%), gradient linéaire (rgba (200, 0, 0, 0.15 ) 10%, rgba (0, 0, 0, 0) 10%);
+  taille de l'arrière-plan: 10px 10px;
+  bordure: 1px pointillé rgba (0,0,0,0);
+  transition: bordure .3s;
+  rembourrage: 20px;
+}
+
+.orgchart> .spinner {
+  taille de la police: 100px;
+  margin-top: 30px;
+  couleur: rgba (68, 157, 68, 0,8);
+}
+
+Table .orgchart {
+  border-collapse: séparé;
+}
+
+.orgchart> table: premier enfant {
+  marge: 20px auto;
+}
+
+.oc-panel {
+  position: absolue;
+  gauche: 30px;
+  haut: 60px;
+  indice z: 100;
+  rembourrage: 5px;
+}
+
+.oc-btn {
+  marge: 2px 10px;
+  position: relative;
+}
+
+/ * style des nœuds * /
+.orgchart .node {
+  affichage: bloc en ligne;
+  position: relative;
+  marge: 0;
+  rembourrage: 5px;
+  text-align: centre;
+  largeur: 130px;
+}
+.orgchart .node> .spinner {
+  position: absolue;
+  haut: calc (50% - 15px);
+  à gauche: calc (50% - 15px);
+  alignement vertical: milieu;
+  taille de la police: 30px;
+  couleur: rgba (68, 157, 68, 0,8);
+}
+.orgchart .node: hover {
+  couleur d'arrière-plan: rgba (238, 217, 54, 0,5);
+  transition: 0,5 s;
+  curseur: par défaut;
+  indice z: 20;
+}
+.orgchart .node.focused {
+  couleur d'arrière-plan: rgba (238, 217, 54, 0,5);
+}
+.orgchart .node .title {
+  position: relative;
+  text-align: centre;
+  taille de la police: 12px;
+  poids de la police: gras;
+  hauteur: 20px;
+  hauteur de ligne: 20px;
+  débordement caché;
+  text-overflow: points de suspension;
+  espace blanc: nowrap;
+  couleur d'arrière-plan: rgba (217, 83, 79, 0,8);
+  couleur: #fff;
+  rayon de la bordure: 4px 4px 0 0; 
+}
+.orgchart .node .title .symbol {
+  float: gauche;
+  marge supérieure: 4px;
+  marge gauche: 2px;
+}
+.orgchart .node .content {
+  position: relative;
+  largeur: 100%;
+  taille de la police: 11px;
+  hauteur de ligne: 13px;
+  rembourrage: 2px;
+  rayon de la bordure: 0 0 4px 4px;
+  text-align: centre;
+  couleur d'arrière-plan: #eee;
+  couleur: # 333;
+  débordement caché;
+}
+.orgchart .node .edge {
+  taille de la police: 15px;
+  position: absolue;
+  couleur: rgba (68, 157, 68, 0,5);
+  curseur: par défaut;
+  transition: .2s;
+  transformer: traduire (0,0);
+  -webkit-transition: .2s;
+  -webkit-transform: translate (0,0);
+}
+.orgchart .edge: hover {
+  couleur: # 449d44;
+  curseur: pointeur;
+}
+.orgchart .node .topEdge {
+  largeur: 100%;
+  haut: -5px;
+  gauche: 0px;
+}
+.orgchart .node .rightEdge {
+  largeur: 15px;
+  haut: calc (50% - 8px);
+  à droite: -4px;
+}
+.orgchart .node .bottomEdge {
+  largeur: 100%;
+  gauche: 0px;
+  haut: auto;
+  bas: -4px;
+  text-align: centre;
+}
+.orgchart .node .leftEdge {
+  largeur: 15px;
+  haut: calc (50% - 8px);
+  à gauche: -4px;
+}
+.orgchart .node .edge.fa-chevron-up: hover {
+  transformer: traduire (0, -4px);
+  -webkit-transform: translate (0, -4px);
+}
+.orgchart .node .edge.fa-chevron-down: hover {
+  transformer: traduire (0, 4px);
+  -webkit-transform: translate (0, 4px);
+}
+.orgchart .node .edge.fa-chevron-right: hover {
+  transformer: traduire (4px, 0);
+  -webkit-transform: translate (4px, 0);
+}
+.orgchart .node .edge.fa-chevron-right: hover ~ .fa-chevron-left {
+  transformer: traduire (-4px, 0);
+  -webkit-transform: translate (-4px, 0);
+}
+.orgchart .node .edge.fa-chevron-left: hover {
+  transformer: traduire (-4px, 0);
+  -webkit-transform: translate (-4px, 0);
+}
+/ * la morue suivante ne fonctionne pas * /
+.orgchart .node .edge.fa-chevron-left: hover ~ .fa-chevron-right {
+  transformer: traduire (4px, 0);
+  -webkit-transform: translate (4px, 0);
+}
+.rightEdgeTransitionToRight {
+  transformer: traduire (4px, 0);
+  -webkit-transform: translate (4px, 0);
+}
+.rightEdgeTransitionToLeft {
+  transformer: traduire (-4px, 0);
+  -webkit-transform: translate (-4px, 0);
+}
+.orgchart .node .avatar {
+  largeur: 50px;
+  hauteur: 50px;
+  float: gauche;
+  marge: 5px;
+  arrière-plan: #eee;
+}
+
+.orgchart .down {
+  couleur d'arrière-plan: rgba (217, 83, 79, 0,8);
+  marge: 0px auto;
+  hauteur: 20px;
+  largeur: 2px;
+}
+
+.orgchart td.top {
+  bordure supérieure: rgba solide 2px (217, 83, 79, 0,8);
+}
+
+.orgchart td.left {
+  bordure gauche: rgba solide 1px (217, 83, 79, 0,8);
+}
+
+.orgchart td.right {
+  bordure droite: rgba solide 1px (217, 83, 79, 0,8);
+}
+
+/ * cellule de nœud * /
+.orgchart td {
+  text-align: centre;
+  alignement vertical: haut;
+  rembourrage: 0;
+}
+
+.chart-map {
+    affichage: aucun;
+}
+.chart-preview {
+    visibilité: cachée;
+    position: absolue;
+    gauche: 40%;
+    haut: -80px;
+    rembourrage: 10px 50px;
+    arrière-plan: rgba (0,0,0,0,6);
+    transition: .3s;
+    couleur: #fff;
+}
+.chart-preview: hover {
+    couleur: #fff;
+}
+.chart-preview: avant {
+    position: absolue;
+    gauche: 50%;
+    haut: -20px;
+    teneur: '';
+    bordure: 10px solide transparent;
+    bordure inférieure: 10px solide rgba (0,0,0,0,6);
+}
+.preview-show {
+    haut: 50px;
+    visibilité: visible;
+}
