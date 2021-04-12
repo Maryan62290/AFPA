@@ -1,6 +1,6 @@
 <?php
    
-    require "../includes/header.php";
+
     require_once  "../view/ViewUser.php" ;
     require_once  "../model/ModelUser.php";
     
@@ -17,11 +17,5 @@
     } else {
         ViewUser::ajoutUser();
     }
-
-
-
-
-
-    require "../includes/footer.php";
 
     ?>
