@@ -1,6 +1,8 @@
 <?php
-      require_once  "../view/ViewUser.php" ;
-      require_once  "../model/ModelUser.php";
+   
+    require "../includes/header.php";
+    require_once  "../view/ViewUser.php" ;
+    require_once  "../model/ModelUser.php";
     
 
     if (isset($_POST['ajout'])) {
@@ -16,4 +18,6 @@
         ViewUser::ajoutUser();
     }
 
-    ?>
+    require "../includes/footer.php";
+
+?>
