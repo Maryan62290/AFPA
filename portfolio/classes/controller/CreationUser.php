@@ -6,7 +6,7 @@
     require_once  "../controller/UploadPhoto.php";
 
     
-    if (isset($_POST['ajout']) && UploadPhoto::AjoutImage() == True) {
+    if (isset($_POST['ajout']) && UploadPhoto::AjoutImage()) {
         
         ModelUser::ajoutUser($_POST['nom'], $_POST['prenom'],$_POST['mail'], $_POST['tel'], $_POST['adresse'], $_FILES['photo'], $_POST['description']);
             
